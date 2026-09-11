@@ -1,26 +1,26 @@
-# Studyback
+# Re:Learn
 
 **Turn your existing study materials into a personal AI teacher.**
 
-Studyback is an AI-powered learning platform that transforms the PDFs, lecture notes, and slides you already have into a structured, interactive study workspace. Instead of rereading the same material and guessing what you actually understand, Studyback explains concepts, quizzes you, evaluates your answers, and tracks topic-level mastery — all grounded in your own materials.
+Re:Learn is an AI-powered learning platform that transforms the PDFs, lecture notes, and slides you already have into a structured, interactive study workspace. Instead of rereading the same material and guessing what you actually understand, Re:Learn explains concepts, quizzes you, evaluates your answers, and tracks topic-level mastery — all grounded in your own materials.
 
 ---
 
-[Watch the Studyback Demo](https://youtu.be/6VwkiUaHL9I?si=7uB4bDE_rDPMF5Sd)
+[Watch the Re:Learn Demo](https://youtu.be/6VwkiUaHL9I?si=7uB4bDE_rDPMF5Sd)
 
 ## Overview
 
 Students accumulate a lot of study material — PDFs, lecture notes, and slides — but traditional self-study usually means reading the same content over and over without a clear sense of what has actually been learned. Creating quizzes, summaries, and study plans by hand also takes significant time.
 
-Studyback solves this by turning uploaded study materials into an interactive learning workspace built around a simple learning loop:
+Re:Learn solves this by turning uploaded study materials into an interactive learning workspace built around a simple learning loop:
 
 ```
 Learn → Test → Evaluate → Review
 ```
 
-You upload a PDF, Studyback extracts and processes it, identifies the topics and subtopics inside it, and makes the material available in your Material Library. From there you can open any material, see an overview of its topics and your progress, and start a study session. During a session, Studyback explains concepts, generates quizzes from the material, evaluates your answers with feedback, flags weak topics, and guides you back to what needs more attention.
+You upload a PDF, Re:Learn extracts and processes it, identifies the topics and subtopics inside it, and makes the material available in your Material Library. From there you can open any material, see an overview of its topics and your progress, and start a study session. During a session, Re:Learn explains concepts, generates quizzes from the material, evaluates your answers with feedback, flags weak topics, and guides you back to what needs more attention.
 
-Studyback is built for students who want to revisit material they have already studied — especially before exams or when reviewing a previous semester.
+Re:Learn is built for students who want to revisit material they have already studied — especially before exams or when reviewing a previous semester.
 
 ## The Problem
 
@@ -35,7 +35,7 @@ Manually building quizzes and study plans for each subject is time-consuming and
 
 ## The Solution
 
-Studyback turns passive study materials into active, structured learning. Upload a document once, and Studyback:
+Re:Learn turns passive study materials into active, structured learning. Upload a document once, and Re:Learn:
 
 - Extracts the text and identifies the topics and subtopics within it.
 - Stores the material in a personal Material Library with per-topic progress.
@@ -45,15 +45,15 @@ Studyback turns passive study materials into active, structured learning. Upload
 
 The learning experience is grounded entirely in the user's own uploaded material rather than general knowledge, so sessions stay aligned with the student's actual course content.
 
-## How Studyback Works
+## How Re:Learn Works
 
 A typical flow through the product:
 
 1. **Upload Material** — a student uploads a study document such as a PDF.
-2. **Process Material** — Studyback extracts the text and splits it into manageable chunks.
+2. **Process Material** — Re:Learn extracts the text and splits it into manageable chunks.
 3. **Identify Topics** — the system identifies the topics and subtopics covered by the material.
 4. **Study** — the student opens a study session and selects the topics, learning mode, and difficulty.
-5. **Test** — Studyback generates quizzes from the material's content.
+5. **Test** — Re:Learn generates quizzes from the material's content.
 6. **Evaluate** — answers are evaluated with detailed feedback, and the results update topic mastery.
 7. **Review** — weak topics are flagged and the student is guided back to them for targeted review.
 
@@ -76,7 +76,7 @@ Progress is saved, so a student can return to any material later and continue fr
 
 ## Technical Architecture
 
-Studyback is a single-page application backed by a Laravel modular monolith and PostgreSQL, with an in-process AI orchestration layer that keeps application logic independent of any specific AI provider.
+Re:Learn is a single-page application backed by a Laravel modular monolith and PostgreSQL, with an in-process AI orchestration layer that keeps application logic independent of any specific AI provider.
 
 ```mermaid
 flowchart TD
@@ -146,7 +146,7 @@ Only topic identification is an AI step; extraction, cleaning, and chunking are 
 ## Project Structure
 
 ```
-studyback/
+Re:Learn/
 ├── docker/
 │   └── nginx/                 # Nginx configuration and site routing
 ├── backend/                   # Laravel application (PHP 8.2)
@@ -274,7 +274,7 @@ docker compose exec frontend npm run build
 ### Database access
 
 ```bash
-docker compose exec postgres psql -U studyback -d studyback
+docker compose exec postgres psql -U Re:Learn -d Re:Learn
 ```
 
 ### Restart a service
@@ -356,4 +356,4 @@ docker compose restart frontend
 
 ## Hackathon
 
-Studyback was built for the **Impact Forge: Summer 2026 Hackathon**.
+Re:Learn was built for the **Impact Forge: Summer 2026 Hackathon**.
